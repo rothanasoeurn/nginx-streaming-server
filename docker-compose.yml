@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nginx-hls:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./hls:/usr/share/nginx/html/hls
+      - ./players://usr/share/nginx/html/players
