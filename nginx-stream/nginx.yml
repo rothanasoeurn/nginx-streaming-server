@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  nginx_cache:
+    image: docker-registry.sabay.com/docker/nginx-vod-module:production
+    container_name: nginx_cache
+    ports:
+      - 80:80
+    env_file:
+      - .env
+    volumes:
+      - ./configs/nginx-stream-vdo-to-segment.conf:/usr/local/nginx/conf/nginx.conf
+      - ../stream-video:/var/www/stream
+    networks:
+      - sabay_docker
+
+networks:
+  sabay_docker:
+    external: true

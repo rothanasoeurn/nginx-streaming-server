@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  s3manager:
+    image: cloudlena/s3manager
+    container_name: s3manager
+    ports:
+      - 8183:8080
+    env_file:
+      - .env
+    networks:
+      - sabay_docker
+networks:
+  sabay_docker:
+    external: true

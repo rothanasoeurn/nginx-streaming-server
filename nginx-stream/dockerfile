@@ -1,0 +1,8 @@
+FROM linuxserver/ffmpeg:latest
+
+
+COPY ./ ${APP_DIR}
+
+RUN install -m 755 ./*.sh
+
+ENTRYPOINT ["ffmpeg-command.sh"]

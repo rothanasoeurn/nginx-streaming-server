@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  ffmpeg:
+    image: linuxserver/ffmpeg:latest
+    volumes:
+      - ../stream-video:/stream-video # Replace with your paths
+      - ./scripts:/scripts
+    entrypoint: ./scripts/hls_with_resolution.sh
