@@ -1,4 +1,4 @@
-# Test Stream HLS and Dash and Mp4 With Nginx
+# Nginx Streaming Server HLS and Dash and Mp4
 
 ## Configs
 
@@ -11,4 +11,4 @@
 
 ## Script
 
-- Chunk video to segment with FFMPEG script
+- Chunk video to segment(dash, hls) with FFMPEG script
